@@ -1,3 +1,5 @@
 # ethernautsolutions
 
-my solutions to openzepplin's smart contract CTF's
+my solutions and notes for openzepplin ethernaut smart contract CTF's
+
+https://ethernaut.openzeppelin.com/
