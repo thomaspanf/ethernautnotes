@@ -27,8 +27,10 @@ the contribute function checks if the contribution is less than 0.001 ether and 
 
 ```
 toWei("0.001")
-~~~
+
+```
 returns the value of ether to wei, so any contribution less than the return value of '1000000000000000' will allow msg.sender to take ownership. 
+
 ```
 contract.contribute({100})
 contract.sendTransaction({100})
@@ -36,6 +38,7 @@ contract.withdraw()
 ```
 
 once ownership of the contract is taken, we can access the withdraw() function to drain the contract. 
+
 
 
 
