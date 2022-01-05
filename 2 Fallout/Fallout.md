@@ -17,7 +17,7 @@ notice that the constructor is misspelled as Fal1out() instead of Fallout()
 
 If the constructor does not have the exact same name as the contract, it becomes a publicly invokable function. In this case, Fal1out() allows anybody to call the function and take ownership of the function with any msg.value.
 
->order of calls to solve this stage:
+>Solution: 
 
 - contract.Fal1out()
 
