@@ -11,10 +11,10 @@ Taken from the solidity documentation:
 
 If we type in contract.abi, you can see that there is a fallback function, which tells us that we are only interacting with the Delegation contract. the delegatecall() function in the fallback allows the calling contract (delegation) to invoke a function in the called (delegate) contract. The called contract can influence the state of the calling contract. 
 
-We want to pass in the pwn() function into the delegatecall: 
+We want to pass in the own() function into the delegatecall: 
 
 ```  
-function pwn() public {
+function own() public {
     owner = msg.sender;
   }
 }
@@ -24,9 +24,9 @@ the delegatecall() allows us to pass in a function from the called contract and 
 >Solution: 
 
 ```
-var pwnFunction = web3.utils.sha3("pwn()")
+var ownFunction = web3.utils.sha3("own()")
 
-contract.sendTransaction({data: pwnFunction})
+contract.sendTransaction({data: ownFunction})
 ```
 
 First we create a variable that calls the web3 sha3 function to create a sha3 signature that represents the pwn() function we want to call, then we pass that signature in as a transaction into the Delegation contract. Once that transation goes through, msg.sender becomes the owner of the contract. 
