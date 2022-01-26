@@ -25,3 +25,4 @@ if we call contract.owner(), we can see that our address is now the owner of the
 
 The main takeaway from this stage is that small human errors such as typos can cause catastrophic damage. 
 
+

@@ -8,3 +8,5 @@ max++;
 this is the reason why OpenZeppelin has the SafeMath.sol contract standard to prevent over/underflows by adding standard function modifiers to lock the size of a uint. 
 
 However, this isn't as relevant since the latest version of solidity takes care of it for us. 
+
+
