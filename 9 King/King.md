@@ -9,7 +9,7 @@ When you submit the instance back to the level, the level is going to reclaim ki
 ---
 The current price is initialized at 1 eth, so we need to send at least 1 eth to take kingship. This fallback function describes how the game works. 
 
-```
+```-
   receive() external payable {
     require(msg.value >= prize || msg.sender == owner);
     king.transfer(msg.value);

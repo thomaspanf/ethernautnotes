@@ -19,7 +19,7 @@ The key to this problem is the `selfdestruct` opcode. Essentially it's used to a
 
 We need to deploy a contract that has a payable function which allows for the contract to recieve ether. Once we send ether to this contract, call the `selfdestruct()` and pass in the instance address as the parameter. 
 
-
+```-
     function destruct(address payable _to) external payable {
         selfdestruct(_to);
     }
@@ -27,6 +27,7 @@ We need to deploy a contract that has a payable function which allows for the co
     function deposit() external payable {
         balance += msg.value;
     }
+```
 
 **Takeaways** 
 Don't make the assumption that you are in charge of the balance sheet of your contract. `selfdestruct` is still accessable via `delegatecall` even if you don't implement `selfdestruct` in your own contract. Emit an event when you `selfdestruct` for reference
