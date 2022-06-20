@@ -21,7 +21,7 @@ function own() public {
 ```
 the delegatecall() allows us to pass in a function from the called contract and modifies the storage and state variables of the calling contract. In this case, we want to change the state of owner to msg.sender. 
 
->Solution: 
+**Solution:**
 
 ```
 var ownFunction = web3.utils.sha3("own()")
@@ -30,3 +30,7 @@ contract.sendTransaction({data: ownFunction})
 ```
 
 First we create a variable that calls the web3 sha3 function to create a sha3 signature that represents the pwn() function we want to call, then we pass that signature in as a transaction into the Delegation contract. Once that transation goes through, msg.sender becomes the owner of the contract. 
+
+[Further reading on `delegatecall`](https://eip2535diamonds.substack.com/p/understanding-delegatecall-and-how)
+
+[pwnd](https://blog.openzeppelin.com/on-the-parity-wallet-multisig-hack-405a8c12e8f7/)

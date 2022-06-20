@@ -10,4 +10,4 @@ this is the reason why OpenZeppelin has the SafeMath.sol contract standard to pr
 However, this isn't as relevant since the latest version of solidity takes care of it for us. 
 
 >Solution
-call the transfer() function and transfer 21 tokens (or anything more than 20). This causes an underflow, which sets the msg.sender's balance to 255. 
+call the transfer() function and pass in any address and 21 tokens as parameters (or anything more than 20). This causes an underflow, which sets the msg.sender's balance to 255. 

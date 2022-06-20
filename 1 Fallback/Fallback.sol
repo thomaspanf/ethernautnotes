@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.6.0;
 
-import '@openzeppelin/contracts-ethereum-package/contracts/GSN/GSNRecipient.sol';
+import '@openzeppelin/contracts/math/SafeMath.sol';
 
 contract Fallback {
 
