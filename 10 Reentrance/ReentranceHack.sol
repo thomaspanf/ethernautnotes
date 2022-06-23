@@ -4,7 +4,7 @@ import './Reentrance.sol';
 
 contract ReentranceHack {
 
-    address instanceAddr = "INSTANCE_ADDR_HERE";
+    address instanceAddr = INSTANCE_ADDR_HERE;
     Reentrance public target;
     uint256 initDeposit;
 
